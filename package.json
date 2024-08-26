@@ -1,0 +1,62 @@
+{
+  "name": "@siymiel/react-package",
+  "version": "1.0.1",
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run prettier && npm run lint",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "test": "jest --config jestconfig.json"
+  },
+  "author": "Samuel Kinuthia",
+  "license": "ISC",
+  "description": "Simple counter react-app package",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siymiel/react-ui-package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Siymiel/react-ui-package/issues"
+  },
+  "homepage": "https://github.com/Siymiel/react-ui-package#readme",
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "react",
+    "counter",
+    "simple",
+    "example",
+    "typescript"
+  ],
+  "devDependencies": {
+    "@testing-library/react": "^16.0.0",
+    "@types/jest": "^29.5.12",
+    "@types/react": "^18.3.4",
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
+    "@typescript-eslint/parser": "^8.2.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "jest": "^29.7.0",
+    "jest-canvas-mock": "^2.5.2",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.3.3",
+    "react-dom": "^18.3.1",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.5.4"
+  }
+}
