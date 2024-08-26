@@ -1,6 +1,6 @@
 {
   "name": "@siymiel/react-package",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -17,6 +17,9 @@
   "author": "Samuel Kinuthia",
   "license": "ISC",
   "description": "Simple counter react-app package",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Siymiel/react-ui-package.git"
